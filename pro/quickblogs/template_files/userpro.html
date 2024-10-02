@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Quick Blogs</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body style="font-family: 'Arial', sans-serif; background-image: url('{% static "images/reg.jpg" %}');">
+
+<header style="background-color: #3559db; padding: 20px; color: white; display: flex; justify-content: space-between; align-items: center;">
+    <div class="logo">
+        <h1 style="margin: 0; color: white; font-size: 2rem;">Quick Blogs</h1>
+    </div>
+    <nav>
+        <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
+            <li><a href="#" style="color: white; text-decoration: none; font-weight: bold;">Home</a></li>
+            <li><a href="#" style="color: white; text-decoration: none; font-weight: bold;">Profile</a></li>
+            <li><a href="#" style="color: white; text-decoration: none; font-weight: bold;">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main style="flex: 1; display: flex; align-items: center; justify-content: center;">
+    <section class="profile-container" style="background: rgba(255, 255, 255, 0.95); border-radius: 10px; padding: 40px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); text-align: center; max-width: 400px; width: 90%;">
+        <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #3498db;">Welcome {{r.username}}!</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 20px;"><img src="{{ r.image.url }} " alt="Image"></a></p>
+        <p>
+    <img src="{{ r.image.url }}" style="max-width: 100%; height: auto;">
+</p>
+        <button class="button" style="background-color: #3498db; color: white; padding: 12px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 10px 0; transition: background-color 0.3s ease, transform 0.3s ease;"
+                onclick="location.href='7'">Create Post</button>
+        <button class="button" style="background-color: #3498db; color: white; padding: 12px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 10px 0; transition: background-color 0.3s ease, transform 0.3s ease;"
+                onclick="location.href='view_posts_url'">View Posts</button>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: #555;">Want to edit your profile? <a href="#" style="color: #3498db; text-decoration: none;">Edit here</a></p>
+    </section>
+</main>
+
+<footer style="background-color: #3559db; color: white; text-align: center; padding: 20px;">
+    <p style="color: #F8F8F0; margin: 0;">&copy; 2024 Your Project Name. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
